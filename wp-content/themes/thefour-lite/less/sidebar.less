@@ -1,0 +1,112 @@
+/**
+ * Sidebar
+ *
+ * -----------------------------------------------------------------------------
+ */
+.sidebar {
+	width: 30%;
+	.font-scale(-1);
+}
+.widget {
+	margin-bottom: 15%;
+	overflow: hidden;
+
+	*:last-child {
+		margin-bottom: 0;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	li {
+		padding: 10px 0;
+		border-top: 1px solid #e6e6e6;
+	}
+	li ul > li:first-child {
+		margin-top: 10px;
+	}
+	.page_item_has_children {
+		padding-bottom: 0;
+	}
+	li li {
+		padding-left: 15px;
+	}
+	li .post-date {
+		margin-left: 5px;
+		color: #999;
+	}
+	> ul > li:first-child {
+		border-top: 0;
+		padding-top: 0;
+	}
+}
+.widget:last-child {
+	padding-bottom: 0;
+	border-bottom: 0;
+	margin-bottom: 0;
+}
+.widget-title {
+	text-transform: uppercase;
+	margin: 0 0 20px;
+}
+
+
+/* Search form */
+.search-form {
+	position: relative;
+
+	.search-field {
+		padding: 1em 4.5em 1em 1.5em;
+		width: 100%;
+	}
+	.search-button {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		border-radius: 0 3px 3px 0;
+	}
+}
+
+
+/* Widget calendar */
+
+#wp-calendar {
+	caption,
+	td,
+	th {
+		text-align: center;
+		padding: 4% 2%;
+	}
+	tr {
+		background: none;
+	}
+	#prev {
+		text-align: left;
+	}
+	#next {
+		text-align: right;
+	}
+	tfoot a {
+		display: block;
+	}
+}
+
+
+/* Widget tag cloud */
+
+.widget_tag_cloud .tagcloud a {
+	&:extend(.post-tags a all);
+}
+
+/* Jetpack subscription widget */
+
+.jetpack_subscription_widget #subscribe-email {
+	margin-bottom: 1em;
+
+	input {
+		margin-top: 1em;
+		width: 100%;
+	}
+}

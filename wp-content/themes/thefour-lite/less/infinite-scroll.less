@@ -1,0 +1,50 @@
+/* Hides navigation links and site footer when infinite scroll is active */
+.infinite-scroll .pagination,
+.infinite-scroll.neverending .site-footer {
+	display: none;
+}
+/* Shows the footer again in case all posts have been loaded */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/* Infinite loader */
+//.infinite-loader {
+//	position: fixed;
+//	top: 50%;
+//	left: 50%;
+//	transform: translate3d(-50%, -50%, 0);
+//	box-shadow: 0 0 0 9999px rgba(255, 255, 255, .5);
+//	z-index: 9;
+//}
+
+/* Load more button */
+.main #infinite-handle span {
+	background: @main-color;
+	padding: .7em 1.2em;
+	.font-scale(-1);
+	border: 0;
+	border-radius: 3px;
+	transition: all .3s;
+	color: #fff;
+	font-weight: bold;
+
+	&:hover,
+	&:focus {
+		background: shade(@main-color, 18%);
+	}
+}
+
+/* Spinner and load more button in portfolio, testimonial archive page */
+.post-type-archive-jetpack-portfolio,
+.tax-jetpack-portfolio-type,
+.post-type-archive-jetpack-testimonial {
+	#infinite-handle {
+		margin-top: 5%;
+		text-align: center;
+	}
+	.infinite-loader {
+		margin: 5% auto 0;
+		width: 34px;
+	}
+}

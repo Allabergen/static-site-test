@@ -1,0 +1,119 @@
+/**
+ * Pagination
+ *
+ * -----------------------------------------------------------------------------
+ */
+
+// Common style for post and comment navigation
+.navigation {
+	margin-top: 1em;
+	border-top: 4px solid #eee;
+	border-bottom: 4px solid #eee;
+	padding: 1em 0;
+	overflow: hidden;
+	clear: both;
+
+	a {
+		display: block;
+		color: #666;
+
+		.post-title {
+			transition: color .2s;
+			font-weight: 700;
+		}
+		&:hover {
+			text-decoration: none;
+
+			.post-title {
+				color: #1abc9c;
+			}
+		}
+	}
+	.meta-nav {
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		.font-scale(-1);
+		color: #999;
+		margin-bottom: 7px;
+		font-weight: 700;
+		display: block;
+	}
+	.nav-previous {
+		float: left;
+		max-width: 49%;
+	}
+	.nav-next {
+		float: right;
+		text-align: right;
+		max-width: 49%;
+	}
+}
+// Comment navigation
+.comment-navigation {
+	margin-top: 5%;
+	border-top: 1px solid #eee;
+	padding-top: 5%;
+	.font-scale(-1);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+
+	a {
+		display: inline-block;
+	}
+}
+// Posts navigation
+.page-title {
+	margin-bottom: 7.5%;
+	text-align: center;
+}
+.page-title h4 {
+	position: relative;
+	display: inline-block;
+	text-transform: uppercase;
+	.font-scale(-1);
+	letter-spacing: 1px;
+	font-weight: 700;
+	color: #999;
+	padding-bottom: 5px;
+	border-bottom: 2px solid #eee;
+}
+.pagination {
+	a,
+	span {
+		display: inline-block;
+		background: #212121;
+		padding: .7em 1.2em;
+		color: #fff;
+		.font-scale(-1);
+		font-weight: bold;
+		border-radius: 3px;
+		transition: all .3s;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	.current,
+	a:hover {
+		background: @main-color;
+		color: #fff;
+	}
+}
+.page-links {
+	font-weight: bold;
+	text-transform: uppercase;
+
+	a {
+		display: inline-block;
+		background: #212121;
+		padding: 0 .6em;
+		color: #fff;
+		border-radius: 2px;
+		transition: all .3s;
+		margin: 0 5px;
+	}
+	a:hover {
+		background: @main-color;
+		color: #fff;
+		text-decoration: none;
+	}
+}

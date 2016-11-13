@@ -1,0 +1,296 @@
+/**
+ * Entry
+ *
+ * Style for post, page (entry)
+ *
+ * -----------------------------------------------------------------------------
+ */
+.hentry {
+	background: #fff;
+	box-shadow: 0 0 12px rgba(0, 0, 0, .08);
+	margin-bottom: 10%;
+	border-radius: 4px;
+}
+.sticky {
+	position: relative;
+}
+.sticky-post {
+	position: absolute;
+	top: 30px;
+	right: 0;
+	background: #13c0a2;
+	color: #fff;
+	text-transform: uppercase;
+	.font-scale(-1);
+	padding: .5em 1.2em;;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.entry-text {
+	padding: 8% 10%;
+}
+
+// Entry header
+.entry-header {
+	padding-bottom: 4%;
+}
+
+.entry-title {
+	margin: 0;
+
+	a {
+		color: #212121;
+	}
+}
+
+// Entry meta
+.entry-meta {
+	color: #999;
+	margin-bottom: 5px;
+}
+.updated {
+	display: none;
+}
+#page .entry-date-wrapper {
+	color: inherit;
+}
+.entry-date {
+	text-transform: uppercase;
+	.font-scale(-1);
+	display: block;
+}
+
+// Entry meta in the hero area
+.site-header {
+	.entry-meta {
+		.font-scale(-1);
+		color: rgba(255, 255, 255, .6);
+		margin: 14px 0 0;
+
+		img {
+			border-radius: 50%;
+			vertical-align: middle;
+			margin-right: 5px;
+			width: 32px;
+			height: 32px;
+		}
+		a {
+			color: rgba(255, 255, 255, .8);
+		}
+	}
+	.entry-date {
+		margin-bottom: 10px;
+	}
+	.comments-link {
+		margin-left: 5px;
+	}
+}
+
+.entry-content,
+.entry-summary {
+	p:first-child {
+		margin-top: 0;
+	}
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.entry-content {
+	hr {
+		width: 50%;
+		height: 4px;
+		background: #eee;
+		margin: 2em auto;
+		border: 0;
+	}
+	ul,
+	ol {
+		margin: 0 0 2em;
+	}
+}
+
+/* Caption */
+.wp-caption {
+	margin-bottom: 1.2em;
+	max-width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+
+	img[class*="wp-image-"] {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+.wp-caption-text,
+.gallery-caption {
+	.font-scale(-1);
+	color: #888;
+	margin: .8075em 0;
+	text-align: center;
+}
+
+.alignleft,
+.alignright {
+	margin-top: 0;
+	margin-bottom: 1.2em;
+}
+.alignleft {
+	float: left;
+	margin-right: 1em;
+}
+.alignright {
+	float: right;
+	margin-left: 1em;
+}
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+// Post format aside
+.format-aside .entry-content {
+	padding: 8% 10%;
+}
+
+// Post format quote
+.format-quote {
+	.entry-content {
+		background: #262626;
+		border-radius: 4px;
+		padding: 8% 10%;
+		color: #fff;
+	}
+	blockquote {
+		background: #262626;
+		border-radius: 4px;
+		color: #fff;
+		padding: 0;
+
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+	a {
+		color: rgba(255, 255, 255, .75);
+	}
+}
+
+// Single post, page
+body.single,
+body.page {
+	.site {
+		background: #fff;
+	}
+
+	// No card style on single post/page
+	.content > article {
+		background: transparent;
+		box-shadow: none;
+		margin-bottom: 0;
+
+		.entry-content {
+			padding: 0;
+		}
+
+		&.format-quote .entry-content {
+			padding: 8% 10%;
+		}
+	}
+	.entry-content > p:first-child {
+		.font-scale(1);
+	}
+	.entry-title {
+		text-transform: none;
+	}
+
+	// Post format aside
+	.format-aside .entry-content {
+		padding-top: 0;
+	}
+}
+body.single .header-inner {
+	padding: 230px 0 60px;
+	text-align: left;
+}
+
+/* Password protected post */
+.post-password-form input[type="submit"] {
+	padding: .7em 1.2em;
+}
+
+// Entry media
+.entry-media {
+	position: relative;
+
+	img {
+		display: block;
+		border-radius: 4px 4px 0 0;
+		margin: 0 auto;
+		width: 100%;
+	}
+	iframe {
+		display: block;
+		border: none;
+		width: 100%;
+		height: auto;
+	}
+}
+
+.media-caption-container {
+	position: absolute;
+	width: 95%;
+	margin-left: 2.5%;
+	bottom: 1.5em;
+	text-align: center;
+	.font-scale(-1);
+}
+.media-caption {
+	display: inline-block;
+	padding: 7px 11px;
+	border-radius: 3px;
+	background: #262626;
+	background: rgba(38, 38, 38, .75);
+	color: #fff;
+	text-align: center;
+	line-height: 130%;
+}
+.media-caption:hover {
+	background: #262626;
+	color: #fff;
+}
+
+// Tags
+.entry-footer {
+	margin-top: 5%;
+}
+.post-tags {
+	a {
+		.font-scale(-1);
+		color: #fff;
+		display: inline-block;
+		padding: 5px 10px;
+		margin-bottom: 5px;
+		margin-right: 5px;
+		background: #bbb;
+		border-radius: 2px;
+		transition: background .3s;
+		text-transform: uppercase;
+
+		&:hover {
+			background: @main-color;
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+}
+
+/* Portfolio shortcode */
+.portfolio-entry-header .portfolio-featured-image img {
+	max-height: 272px;
+}

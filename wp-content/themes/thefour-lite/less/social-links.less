@@ -1,0 +1,113 @@
+/**
+ * Social links
+ *
+ * -----------------------------------------------------------------------------
+ */
+.social-links {
+	.clearfix;
+
+	&,
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	li {
+		display: inline-block;
+
+		a {
+			font: normal normal normal 14px/1 FontAwesome;
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			transition: color .5s;
+			text-decoration: none;
+
+			span {
+				display: none;
+			}
+			&:before {
+				line-height: 40px;
+				content: "\f14d";
+			}
+			&:hover, &:active {
+				text-decoration: none;
+			}
+		}
+	}
+
+	a[href*="facebook.com"]:before {
+		content: "\f09a";
+	}
+	a[href*="twitter.com"]:before {
+		content: "\f099";
+	}
+	a[href*="plus.google.com"]:before {
+		content: "\f0d5";
+	}
+	a[href*="linkedin.com"]:before {
+		content: "\f0e1";
+	}
+	a[href*="instagram.com"]:before {
+		content: "\f16d";
+	}
+	a[href*="yelp.com"]:before {
+		content: "\f1e9";
+	}
+	a[href*="youtube.com"]:before {
+		content: "\f167";
+	}
+	a[href*="flickr.com"]:before {
+		content: "\f16e";
+	}
+	a[href*="pinterest.com"]:before {
+		content: "\f0d2";
+	}
+	a[href*="github.com"]:before {
+		content: "\f09b";
+	}
+	a[href*="vimeo.com"]:before {
+		content: "\f27d";
+	}
+	a[href*="dribbble.com"]:before {
+		content: "\f17d";
+	}
+	a[href*="wordpress.com"]:before {
+		content: "\f19a";
+	}
+	a[href*="tumblr.com"]:before {
+		content: "\f173";
+	}
+	a[href*="codepen.io"]:before {
+		content: "\f1cb";
+	}
+	a[href*="skype.com"]:before {
+		content: "\f17e";
+	}
+	a[href*="reddit.com"]:before {
+		content: "\f1a1";
+	}
+	a[href*="stumbleupon.com"]:before {
+		content: "\f1a4";
+	}
+	a[href*="pocket.com"]:before {
+		content: "\f265";
+	}
+	a[href*="foursquare.com"]:before {
+		content: "\f180";
+	}
+
+	// In footer
+	.site-footer & {
+		a {
+			background: rgba(0, 0, 0, .5);
+			border-radius: 50%;
+			color: rgba(255, 255, 255, .5);
+
+			&:hover {
+				color: rgba(255, 255, 255, .8);
+			}
+		}
+	}
+}

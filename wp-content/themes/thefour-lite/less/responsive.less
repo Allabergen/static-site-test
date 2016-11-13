@@ -1,0 +1,85 @@
+/**
+ * Responsive
+ *
+ * -----------------------------------------------------------------------------
+ */
+@media (min-width: 992px) {
+	.brand {
+		max-width: 30%;
+	}
+	.site-navigation {
+		max-width: 70%;
+	}
+	.home .testimonial .column {
+		margin-bottom: 0;
+	}
+}
+@media (max-width: 991px) {
+	// Navigation
+	.main-menu {
+		display: none;
+	}
+	// Toggle icon for hamburger menu
+	.menu-toggle {
+		display: block;
+	}
+
+	// Footer
+	.site-footer .widget {
+		margin-bottom: 5%;
+	}
+}
+@media (max-width: 767px) {
+	// Structure
+	.content,
+	.sidebar {
+		width: 100%;
+		float: none;
+	}
+	.sidebar {
+		margin-top: 40px;
+	}
+
+	// Header
+	.site-title {
+		margin: 14px 0;
+	}
+	.site-description {
+		display: none;
+	}
+
+	// Footer
+	.site-footer {
+		.widget {
+			margin-bottom: 10%;
+		}
+		.copyright,
+		.credits {
+			float: none;
+			max-width: 100%;
+			text-align: center;
+		}
+	}
+}
+@media (max-width: 479px) {
+	// Post content
+	.alignleft,
+	.alignright {
+		float: none;
+		display: block;
+		margin: 0 auto 1.2em auto;
+	}
+
+	.projects .entry-media img {
+		max-height: none;
+	}
+	.jetpack-testimonial-shortcode .testimonial-entry {
+		box-sizing: border-box;
+		padding-left: 2.5% !important;
+		padding-right: 2.5% !important;
+		width: 100% !important;
+	}
+	.jetpack-testimonial-shortcode .testimonial-entry-title {
+		width: 78%;
+	}
+}

@@ -1,0 +1,86 @@
+/**
+ * Home page
+ *
+ * -----------------------------------------------------------------------------
+ */
+.section {
+	margin-bottom: 110px;
+
+	h2 {
+		margin-top: 0;
+		text-align: center;
+		.font-scale(4);
+	}
+
+	/* Call to action */
+	&.call-to-action {
+		text-align: center;
+
+		.button,
+		.button-minimal {
+			margin-bottom: 1em;
+		}
+	}
+
+	/* Blog section */
+	&.blog {
+		padding-bottom: 0;
+
+		h2 {
+			margin-bottom: 1em;
+		}
+
+		article {
+			box-shadow: none;
+			background: none;
+			margin-bottom: 0;
+		}
+
+		.entry-header {
+			padding-bottom: 3%;
+		}
+
+		.entry-text {
+			padding-left: 0;
+			padding-right: 0;
+			padding-bottom: 0;
+			margin-bottom: -0.4em;
+		}
+	}
+
+	/* Flourish section */
+	&.flourish {
+		text-align: center;
+
+		h2 {
+			margin-bottom: 1em;
+		}
+	}
+}
+.main .section:last-child {
+	margin-bottom: 0;
+}
+
+/* Features section: can be use not only in front page but also other pages. */
+.features {
+	@color: #13c0a2;
+
+	h3 {
+		margin: 0;
+	}
+	> p {
+		text-align: center;
+	}
+	i {
+		.font-scale(1);
+		color: @color;
+		width: 50px;
+		vertical-align: middle;
+	}
+	.grid {
+		margin-top: 5%;
+	}
+	.grid p {
+		margin: 10px 0 0 50px;
+	}
+}

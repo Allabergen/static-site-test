@@ -1,0 +1,294 @@
+/**
+ * General HTML elements and classes
+ *
+ * -----------------------------------------------------------------------------
+ */
+@main-color: #13c0a2;
+
+* {
+	box-sizing: border-box;
+}
+body {
+	color: #444;
+	font: 17px/1.8 'Open Sans', sans-serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: #fff;
+}
+
+// Font size scale: musical tetratonic scale
+// @link http://spencermortensen.com/articles/typographic-scale/
+h1, h2, h3, h4, h5, h6 {
+	font-family: Montserrat, sans-serif;
+	font-weight: 400;
+	line-height: 1.2;
+	margin: 1.333em 0 .5em;
+	color: #212121;
+}
+h1 {
+	.font-scale(4);
+	letter-spacing: -.04em;
+}
+h2 {
+	.font-scale(3);
+	letter-spacing: -.04em;
+}
+h3 {
+	.font-scale(2);
+}
+h4 {
+	.font-scale(1);
+}
+h5 {
+	.font-scale(0);
+}
+h6 {
+	.font-scale(-1);
+	text-transform: uppercase;
+}
+p {
+	margin: 0 0 2em;
+}
+blockquote {
+	color: #888;
+	margin: 0;
+	text-align: center;
+	.font-scale(1);
+	font-style: italic;
+
+	&:before,
+	&:after {
+		display: block;
+		content: '';
+		position: relative;
+		width: 2em;
+		border-top: 2px solid #eee;
+		margin: 2em auto;
+	}
+
+	&.alignright,
+	&.alignleft {
+		max-width: 360px;
+		padding: 2em 0;
+		margin: 0;
+
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+
+	&.alignleft {
+		text-align: left;
+	}
+	&.alignright {
+		text-align: right;
+	}
+
+	p {
+		margin-bottom: 1em;
+	}
+	p:last-child {
+		margin: 0;
+	}
+	cite {
+		display: block;
+		margin-top: .5em;
+		.font-scale(-2);
+		font-style: normal;
+		text-transform: uppercase;
+	}
+}
+a {
+	color: @main-color;
+	text-decoration: none;
+	transition: all .3s;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+input,
+textarea {
+	padding: .7em 1.2em;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	transition: all .3s;
+	color: #444;
+}
+textarea {
+	width: 100%;
+}
+
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button,
+.button-minimal {
+	padding: 1.2em 1.4em;
+	margin: 0;
+	border-radius: 3px;
+	border: 1px solid @main-color;
+	background: @main-color;
+	color: #fff;
+	.font-scale(-1);
+	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+	transition: all .3s;
+	display: inline-block;
+
+	&:hover,
+	&:focus {
+		background: shade(@main-color, 18%);
+		border-color: shade(@main-color, 18%);
+		color: #fff;
+		text-decoration: none;
+	}
+}
+.button-minimal {
+	background: transparent;
+	border-color: rgba(0, 0, 0, .3);
+	color: #666;
+
+	&:hover {
+		background: @main-color;
+		color: #fff;
+		border-color: @main-color;
+	}
+
+	.site-header & {
+		border-color: rgba(255, 255, 255, .3);
+		font-weight: 400;
+		color: rgba(255, 255, 255, .75);
+
+		&:hover {
+			background: rgba(255, 255, 255, .05);
+			border-color: rgba(255, 255, 255, .3);
+		}
+	}
+}
+caption {
+	text-align: center;
+	padding: 2%;
+}
+nav ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+:focus,
+:active {
+	outline: 0;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+.clearfix:after {
+	clear: both;
+}
+
+// Helper class for text
+u, .underline {
+	border-bottom: 1px solid #ddd;
+	text-decoration: none;
+}
+big, .highlight {
+	.font-scale(1);
+}
+.hidden {
+	display: none;
+}
+.clear {
+	clear: both;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+
+::selection {
+	background: @main-color;
+	color: #fff;
+}
+::-webkit-input-placeholder {
+	color: #a9a9a9;
+}
+:-ms-input-placeholder {
+	color: #a9a9a9;
+}
+
+// Screen reader text
+.says,
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+.screen-reader-text:focus {
+	clip: auto !important;
+	display: block;
+	height: auto;
+	left: 5px;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+.container {
+	width: 1170px;
+	max-width: 1170 / 1280 * 100%;
+	margin: 0 auto;
+}
+.site {
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+	transition: transform .5s;
+	background: #eee;
+}
+.main {
+	margin: 110px auto;
+}
+.content {
+	width: 65%;
+	float: left;
+	word-wrap: break-word;
+
+	.error404 & {
+		float: none;
+		margin: 0 auto;
+	}
+}
+.sidebar {
+	float: right;
+}
+
+.page-template-grid-page,
+.post-type-archive-jetpack-portfolio,
+.tax-jetpack-portfolio-type,
+.post-type-archive-jetpack-testimonial {
+	.content {
+		width: 100%;
+	}
+}
